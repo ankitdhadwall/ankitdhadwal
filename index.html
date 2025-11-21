@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ankit Dhadwal - Senior Full-Stack Engineer | QA | DevOps | Project Manager</title>
+    <meta name="description" content="Senior Full-Stack Engineer with 12+ years of experience in React, Node.js, Python, AWS, DevOps, QA, and Project Management. Delivering high-quality, scalable solutions across multiple domains.">
+    <meta name="keywords" content="Full-Stack Developer, React Developer, Node.js Developer, Python Developer, DevOps Engineer, QA Engineer, Project Manager, AWS Expert, Web Developer, Software Engineer, Ankit Dhadwal">
+    <meta name="author" content="Ankit Dhadwal">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ankitdhadwal.com/">
+    <meta property="og:title" content="Ankit Dhadwal - Senior Full-Stack Engineer | QA | DevOps | Project Manager">
+    <meta property="og:description" content="Senior Full-Stack Engineer with 12+ years of experience in React, Node.js, Python, AWS, DevOps, QA, and Project Management. Delivering high-quality, scalable solutions.">
+    <meta property="og:image" content="https://ankitdhadwal.com/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ankitdhadwal.com/">
+    <meta property="twitter:title" content="Ankit Dhadwal - Senior Full-Stack Engineer | QA | DevOps | Project Manager">
+    <meta property="twitter:description" content="Senior Full-Stack Engineer with 12+ years of experience in React, Node.js, Python, AWS, DevOps, QA, and Project Management.">
+    <meta property="twitter:image" content="https://ankitdhadwal.com/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>">
+    <link rel="alternate icon" href="favicon.ico">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS Variables for fonts */
+        :root {
+            --metal-font: 'Impact', 'Arial Black', sans-serif;
+        }
+
+        /* Minimal custom styles for gradient animation */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+
+        /* Apply fonts globally */
+        h1, h2, h5, h6, .logo-font {
+            font-family: var(--metal-font);
+        }
+
+        h3, h4 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p, body, input, textarea, button, a, li, span, label, ul, ol {
+            font-family: Calibri, 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
+
+    <!-- Sticky Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="logo-font text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Ankit Dhadwal
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-300 hover:text-cyan-400 transition duration-200">About</a>
+                    <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition duration-200">Skills</a>
+                    <a href="#experience" class="text-slate-300 hover:text-cyan-400 transition duration-200">Experience</a>
+                    <a href="#services" class="text-slate-300 hover:text-cyan-400 transition duration-200">Services</a>
+                    <a href="#philosophy" class="text-slate-300 hover:text-cyan-400 transition duration-200">Work Philosophy</a>
+                    <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition duration-200">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-cyan-400 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#about" class="text-slate-300 hover:text-cyan-400 transition duration-200">About</a>
+                    <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition duration-200">Skills</a>
+                    <a href="#experience" class="text-slate-300 hover:text-cyan-400 transition duration-200">Experience</a>
+                    <a href="#services" class="text-slate-300 hover:text-cyan-400 transition duration-200">Services</a>
+                    <a href="#philosophy" class="text-slate-300 hover:text-cyan-400 transition duration-200">Work Philosophy</a>
+                    <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition duration-200">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden">
+            <!-- Background gradient blobs -->
+            <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                                <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                                    Full-Stack Engineer
+                                </span>
+                            </h1>
+                            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-300">
+                                QA | DevOps | Project Manager
+                            </h2>
+                            <p class="text-lg text-slate-400 max-w-xl">
+                                12+ years of multi-domain expertise delivering high-quality, scalable solutions
+                            </p>
+                            <p class="text-xl text-cyan-400 font-medium">
+                                Building outcome-driven applications that solve real business problems
+                            </p>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:-translate-y-1 transition duration-300">
+                                Let's Work Together
+                            </a>
+                            <a href="https://wa.me/917814655643" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-lg border border-green-400 hover:bg-green-600 hover:border-green-300 hover:-translate-y-1 transition duration-300">
+                                💬 Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Profile Card -->
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="relative w-80 h-80 lg:w-96 lg:h-96">
+                            <!-- Gradient circle -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full opacity-20 blur-2xl animate-pulse"></div>
+                            <div class="relative w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-full border border-slate-700 shadow-2xl flex items-center justify-center">
+                                <!-- Code symbol / Abstract design -->
+                                <div class="text-center space-y-4">
+                                    <div class="text-6xl font-mono text-cyan-400 font-bold">&lt;/&gt;</div>
+                                    <div class="text-sm text-slate-400 font-mono">Full-Stack Excellence</div>
+                                    <div class="flex justify-center space-x-2 text-2xl">
+                                        <span class="text-cyan-400">●</span>
+                                        <span class="text-blue-400">●</span>
+                                        <span class="text-purple-400">●</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-slate-900/50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">About Me</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-slate-700 shadow-2xl hover:shadow-cyan-500/10 transition duration-300">
+                        <p class="text-lg leading-relaxed text-slate-300">
+                            With over <span class="text-cyan-400 font-semibold">12 years of experience</span> in the IT industry, I bring a powerful blend of <span class="text-cyan-400 font-semibold">Full-Stack Development</span>, <span class="text-cyan-400 font-semibold">Quality Assurance</span>, <span class="text-cyan-400 font-semibold">DevOps</span>, and <span class="text-cyan-400 font-semibold">Project Management</span> expertise. I have worked across multiple domains including SaaS platforms, CMS-based applications, Event Management, School Management Systems, Crypto Projects, Stripe Payment Integrations, and Smart Parking Automation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Tech Stack Section -->
+        <section id="skills" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">Skills & Expertise</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Frontend Card -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-2xl">
+                                🎨
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 ml-4">Frontend Technologies</h3>
+                        </div>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>React.js, Next.js, Angular</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>TypeScript, JavaScript (ES6+)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>HTML5, CSS3, TailwindCSS, Bootstrap, Material UI</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend Card -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center text-2xl">
+                                ⚙️
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 ml-4">Backend & API Development</h3>
+                        </div>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>Node.js, NestJS, Express.js</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>Python (FastAPI, Flask, Automation Scripts)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>PHP (Laravel/Core PHP), C#, Java</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>REST APIs, Microservices Architecture</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Database Card -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center text-2xl">
+                                🗄️
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 ml-4">Database Technologies</h3>
+                        </div>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>MySQL</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>SQL Server</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>MongoDB</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Cloud & DevOps Card -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-cyan-500 rounded-lg flex items-center justify-center text-2xl">
+                                ☁️
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 ml-4">Cloud & DevOps</h3>
+                        </div>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>AWS (EC2, RDS, S3, CloudFront, Lambda, IAM)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>CI/CD pipelines with GitHub Actions, Docker, PM2, Nginx</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>Server deployment, debugging, monitoring & performance optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CMS Development Card -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center text-2xl">
+                                📝
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 ml-4">CMS Development</h3>
+                        </div>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>WordPress, Shopify, WooCommerce, Webflow</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Page Builder Card -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-2xl">
+                                🔧
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-100 ml-4">Page Builder Expertise</h3>
+                        </div>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2">▹</span>
+                                <span>Elementor, Divi, Oxygen, WPBakery, Visual Composer</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Assurance Section -->
+        <section id="experience" class="py-20 bg-slate-900/50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">Quality Assurance</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
+                    <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/50 rounded-full">
+                        <span class="text-cyan-400 font-semibold">Full-Stack + QA Mindset</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Left Column -->
+                    <div class="space-y-6">
+                        <p class="text-xl text-slate-300 leading-relaxed">
+                            A strong testing foundation ensures every product I deliver is <span class="text-cyan-400 font-semibold">stable and reliable</span>:
+                        </p>
+                        
+                        <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                            <ul class="space-y-4 text-slate-300">
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3 text-xl">✓</span>
+                                    <span>Manual Testing (Functional, Regression, UAT)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3 text-xl">✓</span>
+                                    <span>Automated Testing (Selenium, Python-based scripts)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3 text-xl">✓</span>
+                                    <span>API Testing (Postman, Swagger)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3 text-xl">✓</span>
+                                    <span>Test planning, execution, and detailed reporting</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Visual Element -->
+                    <div class="flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 shadow-2xl">
+                                <div class="text-center space-y-6">
+                                    <div class="text-6xl">🛡️</div>
+                                    <h3 class="text-2xl font-bold text-slate-100">Quality First</h3>
+                                    <p class="text-slate-400">Every line of code tested, every feature validated</p>
+                                    <div class="flex justify-center space-x-4 pt-4">
+                                        <div class="text-center">
+                                            <div class="text-3xl font-bold text-cyan-400">12+</div>
+                                            <div class="text-sm text-slate-400">Years Testing</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-3xl font-bold text-cyan-400">100%</div>
+                                            <div class="text-sm text-slate-400">Coverage Focus</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Management Section -->
+        <section id="services" class="py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">Project Management & Delivery</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <p class="text-xl text-slate-300 text-center mb-12">
+                        Skilled in managing end-to-end software lifecycles with:
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Tools Card -->
+                        <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-3xl">
+                                    📊
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-100 ml-4">Project Tools</h3>
+                            </div>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▹</span>
+                                    <span>JIRA, ClickUp, Asana, Trello</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▹</span>
+                                    <span>Agile / Scrum framework</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Management Card -->
+                        <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-cyan-500 hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center text-3xl">
+                                    🎯
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-100 ml-4">Leadership</h3>
+                            </div>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▹</span>
+                                    <span>Sprint planning, backlog grooming, timeline tracking</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▹</span>
+                                    <span>Cross-functional team coordination and client communication</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Visual -->
+                    <div class="mt-12 bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
+                        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-6">
+                            <div class="text-center flex-1">
+                                <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                                    📋
+                                </div>
+                                <h4 class="text-lg font-semibold text-slate-100">Planning</h4>
+                                <p class="text-sm text-slate-400 mt-2">Requirements & Strategy</p>
+                            </div>
+                            <div class="hidden md:block text-cyan-400 text-2xl">→</div>
+                            <div class="text-center flex-1">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                                    ⚡
+                                </div>
+                                <h4 class="text-lg font-semibold text-slate-100">Execution</h4>
+                                <p class="text-sm text-slate-400 mt-2">Agile Development</p>
+                            </div>
+                            <div class="hidden md:block text-cyan-400 text-2xl">→</div>
+                            <div class="text-center flex-1">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                                    🚀
+                                </div>
+                                <h4 class="text-lg font-semibold text-slate-100">Delivery</h4>
+                                <p class="text-sm text-slate-400 mt-2">Quality & Launch</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Philosophy Section -->
+        <section id="philosophy" class="py-20 bg-slate-900/50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">Work Philosophy</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border-l-4 border-cyan-500 shadow-2xl">
+                        <div class="space-y-6 text-lg text-slate-300 italic leading-relaxed">
+                            <p>
+                                I aim to deliver <span class="text-cyan-400 font-semibold not-italic">high-quality, scalable, secure applications</span> that are aligned with business goals. My combined experience in development, testing, and project management helps me solve complex problems, optimize workflows, and bring clarity to challenging situations.
+                            </p>
+                            <p>
+                                I learn rapidly, adapt quickly to new technologies, and communicate clearly — ensuring smooth project execution from start to finish.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 pt-8 border-t border-slate-700">
+                            <div class="flex flex-wrap gap-4 justify-center">
+                                <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm">Quality-Driven</span>
+                                <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm">Fast Learner</span>
+                                <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm">Clear Communicator</span>
+                                <span class="px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-sm">Problem Solver</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">Let's Connect</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-slate-300">Have a question or a project in mind?</p>
+                    <p class="text-lg text-slate-400 mt-2">Feel free to reach out — happy to collaborate and help bring your idea to life!</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <!-- Contact Form -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
+                        <form action="#" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition duration-200" placeholder="Your name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition duration-200" placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition duration-200 resize-none" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:-translate-y-1 transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition duration-300">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                                    📧
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold text-slate-100 mb-1">Email</h3>
+                                    <a href="mailto:contact@yourdomain.com" class="text-cyan-400 hover:text-cyan-300 transition duration-200">contact@yourdomain.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition duration-300">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                                    💼
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold text-slate-100 mb-1">LinkedIn</h3>
+                                    <a href="#" class="text-cyan-400 hover:text-cyan-300 transition duration-200">Connect on LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition duration-300">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                                    💻
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold text-slate-100 mb-1">GitHub</h3>
+                                    <a href="#" class="text-cyan-400 hover:text-cyan-300 transition duration-200">View my repositories</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition duration-300">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-cyan-500 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                                    🌐
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold text-slate-100 mb-1">Portfolio</h3>
+                                    <a href="#" class="text-cyan-400 hover:text-cyan-300 transition duration-200">View full portfolio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="text-slate-400 text-center md:text-left">
+                    <p>&copy; 2025 Ankit Dhadwal. All rights reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-cyan-400 transition duration-200">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-cyan-400 transition duration-200">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Minimal JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
