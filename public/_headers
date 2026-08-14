@@ -1,0 +1,16 @@
+# Cloudflare serves static assets with `max-age=0, must-revalidate` by default,
+# so every repeat visit pays a revalidation round-trip. Filenames here are NOT
+# content-hashed (style.css, main.js), so a long immutable cache would strand
+# visitors on stale CSS after a deploy. One day is the compromise: far better
+# than revalidating constantly, and self-healing within 24h of any change.
+/assets/*
+  Cache-Control: public, max-age=86400
+
+# Social preview image; changes rarely and is fetched by crawlers, not visitors.
+/og-image.jpg
+  Cache-Control: public, max-age=2592000
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
