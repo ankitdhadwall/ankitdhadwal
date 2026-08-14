@@ -4,8 +4,11 @@
   "private": true,
   "description": "Personal portfolio site for ankitdhadwal.com, served as static assets from a Cloudflare Worker.",
   "scripts": {
+    "clean": "find public -name '.DS_Store' -delete",
     "dev": "wrangler dev",
+    "predeploy": "npm run clean",
     "deploy": "wrangler deploy",
+    "precheck": "npm run clean",
     "check": "wrangler deploy --dry-run"
   },
   "devDependencies": {
