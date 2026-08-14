@@ -1,6 +1,8 @@
 :root{--c-bg:#050810;--c-surface:#0d1117;--c-surface-2:#161b27;--c-border:rgba(255,255,255,0.07);--c-border-glow:rgba(99,179,237,0.35);--c-text:#e2e8f0;--c-muted:#64748b;--c-cyan:#22d3ee;--c-violet:#a78bfa;--c-indigo:#6366f1;--c-emerald:#34d399;--c-amber:#fbbf24;--font-display:'Space Grotesk',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono',monospace;--radius-xl:1.75rem;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+/* clip, not hidden: `hidden` would make <html> a scroll container and break the
+   sticky header. Older browsers fall back to `hidden`. */
+html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip;}
 body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-body);font-size:16px;line-height:1.7;overflow-x:hidden;}
 #cursor-glow{pointer-events:none;position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.12) 0%,transparent 65%);transform:translate(-50%,-50%);transition:left .15s ease,top .15s ease;z-index:0;}
 .mesh-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;}
@@ -69,4 +71,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   section{padding:3.5rem 0;}
   .contact-info-link{font-size:.82rem!important;word-break:break-all;}
   .glass:hover{transform:none;}
+}
+/* Three stat cards abreast on a phone leaves ~100px per card; the 3rem numerals
+   and 1.75rem padding do not fit. Inline styles set both, hence !important. */
+@media (max-width:640px){
+  #about-stats>div{padding:1.25rem .5rem!important;}
+  #about-stats .stat-num{font-size:1.9rem;}
+  #about-stats>div>div:last-child{font-size:.72rem!important;line-height:1.35;}
 }

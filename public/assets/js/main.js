@@ -17,7 +17,9 @@ function applyLayout() {
   stack.style.display = lg ? 'block' : 'none';
   hgrid.style.gridTemplateColumns = lg ? '1fr 1fr' : '1fr';
   document.getElementById('about-grid').style.gridTemplateColumns = lg ? '2fr 1fr' : '1fr';
-  document.getElementById('about-stats').style.gridTemplateColumns = lg ? '1fr' : 'repeat(3,1fr)';
+  // minmax(0,...) rather than 1fr: grid tracks default to min-width:auto, which
+  // lets the stat numerals push the row wider than the viewport on phones.
+  document.getElementById('about-stats').style.gridTemplateColumns = lg ? '1fr' : 'repeat(3,minmax(0,1fr))';
   document.getElementById('contact-grid').style.gridTemplateColumns = sm ? '1fr' : '1fr 1fr';
   document.getElementById('form-row').style.gridTemplateColumns = sm ? '1fr' : '1fr 1fr';
 }
