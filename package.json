@@ -1,0 +1,14 @@
+{
+  "name": "ankitdhadwal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio site for ankitdhadwal.com, served as static assets from a Cloudflare Worker.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.123.0"
+  }
+}
