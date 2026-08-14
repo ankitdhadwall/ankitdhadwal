@@ -1,0 +1,11 @@
+{
+  // Static-assets-only Worker: no server code, Cloudflare serves the files directly.
+  // Service name must match the Worker in the dashboard ("ankitdhadwal").
+  "name": "ankitdhadwal",
+  "compatibility_date": "2026-08-14",
+  "assets": {
+    // Site root. Kept separate from the repo root so .git and tooling
+    // directories can never be published as static assets.
+    "directory": "./public"
+  }
+}
